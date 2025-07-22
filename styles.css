@@ -1,0 +1,25 @@
+/* Backlog Board Enhancer - Styles */
+
+.collapse-button {
+  opacity: 0.7;
+  transition: opacity 0.2s, background-color 0.2s;
+}
+
+.collapse-button:hover {
+  opacity: 1;
+  background-color: #f0f0f0 !important;
+}
+
+/* 折りたたまれた列のスタイル調整 */
+.board-status[data-collapsed="true"] {
+  min-width: 200px !important;
+  flex-shrink: 0;
+}
+
+/* 折りたたまれた列のヘッダーテキストを維持 */
+.board-status[data-collapsed="true"] .board-status-header {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+

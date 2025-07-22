@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Backlog Board Accordion",
+  "version": "1.0",
+  "description": "Backlogのボード画面でステータス列を折りたたみ可能にする拡張機能",
+
+  "permissions": [
+    "storage"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.backlog.jp/*",
+        "https://*.backlog.com/*"
+      ],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+
+  "web_accessible_resources": [
+    {
+      "resources": ["styles.css"],
+      "matches": ["https://*.backlog.jp/*", "https://*.backlog.com/*"]
+    }
+  ]
+}
